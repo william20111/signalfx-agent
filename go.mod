@@ -39,7 +39,7 @@ require (
 	github.com/gammazero/deque v0.0.0-20190130191400-2afb3858e9c7 // indirect
 	github.com/gammazero/workerpool v0.0.0-20181230203049-86a96b5d5d92 // indirect
 	github.com/garyburd/redigo v1.6.0 // indirect
-	github.com/go-errors/errors v1.0.1 // indirect
+	github.com/go-errors/errors v1.0.1
 	github.com/go-ldap/ldap v3.0.2+incompatible // indirect
 	github.com/go-ole/go-ole v1.2.4 // indirect
 	github.com/go-playground/locales v0.11.2
@@ -126,6 +126,7 @@ require (
 	github.com/signalfx/com_signalfx_metrics_protobuf v0.0.0-20190222193949-1fb69526e884
 	github.com/signalfx/defaults v1.2.2-0.20180531161417-70562fe60657
 	github.com/signalfx/gateway v1.2.19-0.20191125135538-2c417b7ae0bd
+	github.com/signalfx/golib v2.4.1+incompatible
 	github.com/signalfx/golib/v3 v3.1.0
 	github.com/signalfx/signalfx-go v1.6.9-0.20191121015807-da8b1dfaab43
 	github.com/sirupsen/logrus v1.4.0
