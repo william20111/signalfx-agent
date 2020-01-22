@@ -2,6 +2,7 @@ package haproxy
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/signalfx/signalfx-agent/pkg/core/common/httpclient"
 
@@ -23,6 +24,8 @@ type Config struct {
 	URL string `yaml:"url"`
 	// A list of the pxname(s) and svname(s) to monitor (e.g. `["http-in", "server1", "backend"]`). If empty then metrics for all proxies will be reported.
 	Proxies []string `yaml:"proxies"`
+	// Timeout when communicating over Unix sockets
+	UnixTimeout time.Duration `yaml:"unixTimeout" default:"10s"`
 }
 
 func (c *Config) ScrapeURL() string {

@@ -288,11 +288,11 @@ func socketReader(conf *Config, cmd string) (io.ReadCloser, error) {
 	if err != nil {
 		return nil, fmt.Errorf("cannot parse url %s status. %v", conf.ScrapeURL(), err)
 	}
-	f, err := net.DialTimeout("unix", u.Path, conf.HTTPTimeout)
+	f, err := net.DialTimeout("unix", u.Path, conf.UnixTimeout)
 	if err != nil {
 		return nil, err
 	}
-	if err := f.SetDeadline(time.Now().Add(conf.HTTPTimeout)); err != nil {
+	if err := f.SetDeadline(time.Now().Add(conf.UnixTimeout)); err != nil {
 		f.Close()
 		return nil, err
 	}
